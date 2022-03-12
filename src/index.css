@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+.todo{
+  cursor: pointer;
+}
+
 .strike{
   text-decoration: line-through;
 }
