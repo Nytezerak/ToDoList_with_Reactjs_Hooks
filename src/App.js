@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import data from "data.json"
+import data from "./data.json"
 
-import './App.css';
 import Header from './header';
+import ToDoList from './ToDoList.js';
 
 
 function App() {
@@ -11,6 +11,7 @@ function App() {
   return (
     <div className="App">
       <Header/>
+      <ToDoList toDoList={toDoList}/>
     </div>
   );
 }
