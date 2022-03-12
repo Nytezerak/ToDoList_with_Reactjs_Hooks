@@ -1,16 +1,19 @@
 import React, {useState} from 'react';
 import data from "./data.json"
+import './index.css';
 
 import Header from './header';
 import ToDoList from './ToDoList.js';
 
 
+
 function App() {
   const[toDoList, setToDoList] = useState(data)
 
-  const handleToggle = (id) =>{
+  //maps trough data to edit formatation depending of the boolean
+  const handleToggle = (id) => {
     let mapped = toDoList.map(task => {
-      return task.id == id ? { ...task, complete: !task.complete}:{}
+      return task.id == id ? { ...task, complete : !task.complete}:{...task}
     })
     setToDoList(mapped)
   }
